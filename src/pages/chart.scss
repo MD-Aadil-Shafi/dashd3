@@ -1,0 +1,17 @@
+@use '../styles/mixin.scss' as mixin;
+
+.d3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x:scroll;
+    padding-bottom: 50px;
+    cursor: pointer;
+}
+.chart{
+    text-align: center;
+    h1{
+        color: mixin.$light;
+        font-size: 3vw;
+    }
+}

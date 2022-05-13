@@ -1,0 +1,19 @@
+$leftColor: #FAFBFF;
+$white: #fff;
+$btnColor: #33ADFF;
+$black: #4C586B;
+$gray:#8D97AF;
+$light: #BDC5CD;
+$sky:#33ADFF;
+
+
+@mixin tablet {
+    @media screen and (max-width: 768px) {
+        @content;
+    }
+}
+@mixin desktop {
+    @media screen and (max-width: 992px) {
+        @content;
+    }
+}

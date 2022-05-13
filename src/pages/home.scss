@@ -1,0 +1,188 @@
+@use '../styles/mixin.scss' as mixin;
+
+
+
+.home{
+    width: 98vw;
+    margin: auto;
+    display: flex;
+    padding: 18px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .home__item{
+        height: calc(100vh - 36px);
+        flex: 1 1 320px;
+    }
+    .home--bgleft{
+        background-color: mixin.$leftColor;
+        border-radius: 10px 0px 0px 10px;
+        display: flex;
+        flex-direction: column;
+        //justify-content: center;
+        align-items: center;
+        .home__img{
+            width: 90%;
+            margin-top: 10%;
+        }
+        .home--textDiv{
+            text-align: center;
+            margin-top: -10%;
+            max-width: 50%;
+
+            h2{
+                color: mixin.$black;
+            }
+            p{
+                color: mixin.$gray;
+            }
+        }
+        
+        }
+        
+        .home--bgright{
+            background-color: white;
+            box-shadow: 0 0 3px rgba(0,0,0,0.3);
+            border-radius: 0px 10px 10px 0px;
+
+            .home--bgright-div{
+                margin-top: 10%;
+                margin-left: 10%;
+                h2{
+                    color: mixin.$black;
+                    margin-bottom: 30px;
+                }
+                p{
+                    color: mixin.$light;
+                }
+
+                .input-div{
+                    margin-bottom: 20px;
+                }
+
+                .input-label{
+                    color: mixin.$light;
+                }
+
+                .input-field{
+                    margin-top: 8px;
+                    width: 60%;
+                    height: 36px;
+                    border: 1px solid mixin.$light;
+                    border-radius: 5px;
+                }
+                .input-field-half{
+                    margin-top: 8px;
+                    width: 30%;
+                    height: 36px;
+                    border: 1px solid mixin.$light;
+                    border-radius: 5px;
+                }
+                .check-div{
+                    display: flex;
+                    h5{
+                        color:mixin.$black;
+                    }
+                    // .check{
+                    //     position: absolute;
+                    //     opacity: 0;
+                    //     cursor: pointer;
+                    //     height: 0;
+                    //     width: 0;
+                    // }
+                    // .checkmark {
+                    //     position: absolute;
+                    //     top: 0;
+                    //     left: 0;
+                    //     height: 25px;
+                    //     width: 25px;
+                    //     background-color: red;
+                    //   }
+
+                      .container {
+                        display: block;
+                        position: relative;
+                        padding-left: 35px;
+                        margin-bottom: 12px;
+                        cursor: pointer;
+                        font-size: 22px;
+                        -webkit-user-select: none;
+                        -moz-user-select: none;
+                        -ms-user-select: none;
+                        user-select: none;
+
+                        input {
+                            position: absolute;
+                            opacity: 0;
+                            cursor: pointer;
+                            height: 0;
+                            width: 0;
+                          }
+
+                          .checkmark {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            height: 25px;
+                            width: 25px;
+                            background-color: white;
+                            border: 2px solid mixin.$sky;
+                            border-radius: 5px;
+                            text-align: center;
+                          }
+                          input:checked ~ .checkmark {
+                            background-color: white;
+                          }
+                          
+                          /* Create the checkmark/indicator (hidden when not checked) */
+                            .checkmark:after {
+                            content: "";
+                            position: absolute;
+                            display: none;
+                            }
+
+                            input:checked ~ .checkmark:after {
+                                display: block;
+                              }
+                              .checkmark:after {
+                                left: 7px;
+                                top: 3px;
+                                width: 5px;
+                                height: 10px;
+                                border: solid mixin.$sky;
+                                border-width: 0 3px 3px 0;
+                                -webkit-transform: rotate(45deg);
+                                -ms-transform: rotate(45deg);
+                                transform: rotate(45deg);
+                              }
+
+
+                      }
+                      /* When the checkbox is checked, add a blue background */
+                      .container:hover input ~ .checkmark {
+                        background-color: #ccc;
+                      }
+
+
+                }
+                .submit-btn{
+                    background-color: mixin.$sky;
+                    color: white;
+                    font-size: 16px;
+                    width: 36%;
+                    height: 40px;
+                    border: none;
+                    border-radius: 5px;
+                    cursor: pointer;
+                }
+
+                //error message
+                h6{
+                    color: crimson;
+                    transition: 0.5s all;
+                }
+            }
+        }
+}
+
+
+
